@@ -9,15 +9,16 @@ public class Counter : MonoBehaviour
     public static int counter;
     public Text countText;
 
-    
-    
+
+
     void Start()
     {
-        
+        Managers.Input.KeyAction -= OnKeyBoard;
+        Managers.Input.KeyAction += OnKeyBoard;
     }
 
-    
-    void Update()
+
+    void OnKeyBoard()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
@@ -26,7 +27,7 @@ public class Counter : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-             counter++;
+             counter ++;
         }
 
         countText.text = "Á¡¼ö : " + counter;

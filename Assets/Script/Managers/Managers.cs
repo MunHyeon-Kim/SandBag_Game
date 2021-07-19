@@ -14,6 +14,7 @@ public class Managers : MonoBehaviour
     public static ResourceManager Resource { get { return Instance._resource; } }
 
 
+
     void Start()
     {
         Init();

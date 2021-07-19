@@ -21,11 +21,12 @@ public class Timer : MonoBehaviour
         if (_Timer >= 0)
         {
             _Timer -= Time.deltaTime;
-            countText.text = " " + _Timer;
+            int _Timer2 = (int)_Timer;
+            countText.text = " " + _Timer2;
         }
-        else { 
-
-            //결과화면이동 
+        else {
+            EventManager eventManager = new EventManager();
+            eventManager.GameEnding();
         }
 
 
